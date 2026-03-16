@@ -6,12 +6,16 @@ import com.example.gerenciamentoDeEstudantes.entity.Curso;
 import com.example.gerenciamentoDeEstudantes.exception.CursoException;
 import com.example.gerenciamentoDeEstudantes.mapper.CursoMapper;
 import com.example.gerenciamentoDeEstudantes.repository.CursoRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 
+@Service
 public class CursoService {
 
+    @Autowired
     private CursoRepository cursoRepository;
 
     public void criarCurso(CursoDto cursoDto) {
@@ -19,7 +23,7 @@ public class CursoService {
             Curso cursoToSave = CursoMapper.mapCursoToEntityCreate(cursoDto);
             cursoRepository.save(cursoToSave);
         } catch (Exception e) {
-            throw new CursoException("Erro ao criar Curso" + e.getMessage());
+            throw new CursoException("Erro ao criar Curso " + e.getMessage());
         }
     }
 
