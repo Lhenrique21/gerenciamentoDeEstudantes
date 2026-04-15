@@ -6,9 +6,9 @@ import lombok.Setter;
 @Getter
 @Setter
 
-public class CursoDto {
+public class CourseCreateDto {
 
-    private String nome;
-    private float duracao;
+    private String name;
+    private float duration;
 
 }

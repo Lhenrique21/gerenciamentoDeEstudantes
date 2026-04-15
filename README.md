@@ -1,6 +1,6 @@
 🚀 Student Management API
 
-Desenvolvimento de uma API REST utilizando Java e Spring Boot para gerenciamento de estudantes.
+Desenvolvimento de uma API REST utilizando Java e Spring Boot para gerenciamento de students.
 
 Arquitetura em camadas (Controller, Service, Repository, DTO, Mapper)
 Implementação de boas práticas de desenvolvimento backend

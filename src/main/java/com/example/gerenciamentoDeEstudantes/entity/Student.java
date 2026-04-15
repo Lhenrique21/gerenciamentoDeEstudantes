@@ -7,24 +7,24 @@ import lombok.Setter;
 @Getter
 @Setter
 @Entity
-@Table(name = "ESTUDANTE")
-public class Estudante {
+@Table(name = "STUDENT")
+public class Student {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @Column(nullable = false, length = 150)
-    private String nome;
+    private String name;
 
     @Column(nullable = false, unique = true)
-    private int matricula;
+    private int enrollment;
 
     @ManyToOne
     @JoinColumn(nullable = false)
-    private Curso curso;
+    private Course course;
 
     @Column(nullable = false)
-    private int idade;
+    private int age;
 
 }

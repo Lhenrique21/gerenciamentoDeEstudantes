@@ -5,6 +5,7 @@ import lombok.Setter;
 
 @Getter
 @Setter
-public class CursoUpdateDto extends CursoDto {
+
+public class StudentUpdateDto extends StudentCreateDto {
     private Long id;
 }

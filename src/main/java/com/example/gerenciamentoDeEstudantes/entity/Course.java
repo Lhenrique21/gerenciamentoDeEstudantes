@@ -8,20 +8,20 @@ import java.util.List;
 @Getter
 @Setter
 @Entity
-@Table(name = "CURSO")
-public class Curso {
+@Table(name = "COURSE")
+public class Course {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @Column(nullable = false, length = 80)
-    private String nome;
+    private String name;
 
     @Column(nullable = false)
-    private Float duracaoCurso;
+    private Float durationCourse;
 
     @OneToMany
     @JoinColumn(nullable = true)
-    private List<Estudante> estudante;
+    private List<Student> student;
 }
