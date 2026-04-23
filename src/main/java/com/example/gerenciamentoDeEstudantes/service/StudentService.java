@@ -23,7 +23,7 @@ public class StudentService {
             Student studentToSave = StudentMapper.mapEstudanteToEntityCreate(studentCreateDto);
             studentRepository.save(studentToSave);
         } catch (Exception e) {
-            throw new StudentException("Erro ao criar estudante" + e.getMessage());
+            throw new StudentException("Erro ao criar estudante " + e.getMessage());
         }
     }
 
@@ -31,7 +31,7 @@ public class StudentService {
         try {
             studentRepository.deleteById(id);
         } catch (Exception e) {
-            throw new StudentException("Erro ao deletar estudante" + e.getMessage());
+            throw new StudentException("Erro ao deletar estudante " + e.getMessage());
         }
     }
 
@@ -47,7 +47,7 @@ public class StudentService {
                 return studentRepository.save(student1);
             }
         } catch (Exception e) {
-            throw new StudentException("Erro ao atualizar estudante" + e.getMessage());
+            throw new StudentException("Erro ao atualizar estudante " + e.getMessage());
         }
         throw new StudentException(("Id do estudante não encontrado"));
     }
@@ -56,7 +56,7 @@ public class StudentService {
         try {
             return studentRepository.findAll();
         } catch (Exception e) {
-            throw new StudentException("Erro ao listar estudantes" + e.getMessage());
+            throw new StudentException("Erro ao listar estudantes " + e.getMessage());
         }
     }
 }
