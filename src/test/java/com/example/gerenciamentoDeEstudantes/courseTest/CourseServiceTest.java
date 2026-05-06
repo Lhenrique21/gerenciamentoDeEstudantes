@@ -36,7 +36,7 @@ public class CourseServiceTest {
     }
 
     @Test
-    public void mostDeleteCourse() {
+    public void mustDeleteCourse() {
         Mockito.doNothing().when(courseRepository).deleteById(1L);
 
         courseService.deleteCourse(1L);
@@ -45,7 +45,7 @@ public class CourseServiceTest {
     }
 
     @Test
-    public void mostListCourse() {
+    public void mustListCourse() {
         Mockito.when(courseRepository.findAll()).thenReturn(List.of(CourseTest.course()));
 
         List<Course> list = courseService.listCourse();
@@ -57,7 +57,7 @@ public class CourseServiceTest {
     }
 
     @Test
-    public void mostUpdateCourse() {
+    public void mustUpdateCourse() {
         Mockito.when(courseRepository.findById(1L)).thenReturn(Optional.of((CourseTest.course())));
 
         Mockito.when(courseRepository.save(Mockito.any())).thenReturn(new Course());

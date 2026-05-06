@@ -8,12 +8,12 @@ import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
-
 import java.util.List;
+
+@CrossOrigin(origins = "*")
 @RequiredArgsConstructor
 @RestController
 @RequestMapping("/courses")
-@CrossOrigin(origins = "http://localhost:4200")
 @Tag(name = "Cursos", description = "Endpoints para gerenciamento de cursos")
 public class CourseController {
 

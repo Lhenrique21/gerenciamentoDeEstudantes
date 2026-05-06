@@ -26,7 +26,7 @@ public class StudentServiceTest {
     StudentService studentService;
 
     @Test
-    public void mostCreateStudent() {
+    public void mustCreateStudent() {
         StudentCreateDto studentCreateDto = StudentTest.studentDto();
 
         Mockito.when(studentRepository.save(Mockito.any())).thenReturn(new Student());
@@ -38,7 +38,7 @@ public class StudentServiceTest {
     }
 
     @Test
-    public void mostDeleteStudent() {
+    public void mustDeleteStudent() {
         Mockito.doNothing().when(studentRepository).deleteById(1L);
 
         studentService.deleteStudent(1L);
@@ -47,7 +47,7 @@ public class StudentServiceTest {
     }
 
     @Test
-    public void mostListStudent() {
+    public void mustListStudent() {
         Mockito.when(studentRepository.findAll()).thenReturn(List.of(StudentTest.student()));
 
         List<Student> students = studentService.listStudent();
@@ -60,7 +60,7 @@ public class StudentServiceTest {
     }
 
     @Test
-    public void mostUpdateStudent() {
+    public void mustUpdateStudent() {
         StudentUpdateDto estudanteUpdateDto = StudentTest.studentUpdateDto();
 
         Mockito.when(studentRepository.findById(1L)).thenReturn(Optional.of(StudentTest.student()));
