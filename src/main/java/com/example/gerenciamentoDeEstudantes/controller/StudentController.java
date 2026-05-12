@@ -23,6 +23,7 @@ public class StudentController {
     @Operation(summary = "Cria estudante", description = "Recebe o DTO para salvar o  estudante")
     @PostMapping("/create")
     public void createStudent(@RequestBody StudentCreateDto studentCreateDto) {
+        System.out.println("Criando o estudante" + studentCreateDto);
         studentService.createStudent(studentCreateDto);
     }
 

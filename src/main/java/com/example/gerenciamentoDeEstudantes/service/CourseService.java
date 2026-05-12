@@ -41,7 +41,7 @@ public class CourseService {
             if (curso.isPresent()) {
                 Course course1 = curso.get();
                 course1.setName(cursoUpdate.getName());
-                course1.setDurationCourse(cursoUpdate.getDuration());
+                course1.setDurationCourse(cursoUpdate.getDurationCourse());
                 return courseRepository.save(course1);
             }
         } catch (Exception e) {

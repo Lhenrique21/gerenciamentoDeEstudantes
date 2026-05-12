@@ -9,6 +9,6 @@ import lombok.Setter;
 public class CourseCreateDto {
 
     private String name;
-    private float duration;
+    private Float durationCourse;
 
 }

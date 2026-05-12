@@ -11,6 +11,6 @@ public class StudentCreateDto {
 
     private String name;
     private int enrollment;
-    private Course course;
+    private Long courseId;
     private int age;
 }

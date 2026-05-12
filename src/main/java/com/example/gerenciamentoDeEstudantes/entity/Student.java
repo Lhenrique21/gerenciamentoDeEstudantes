@@ -21,7 +21,7 @@ public class Student {
     private int enrollment;
 
     @ManyToOne
-    @JoinColumn(nullable = false)
+    @JoinColumn(name = "course_id", nullable = false)
     private Course course;
 
     @Column(nullable = false)

@@ -12,7 +12,7 @@ public class StudentMapper {
         novoStudent.setName(studentCreateDto.getName());
         novoStudent.setAge(studentCreateDto.getAge());
         novoStudent.setEnrollment(studentCreateDto.getEnrollment());
-        novoStudent.setCourse(studentCreateDto.getCourse());
+        novoStudent.setCourse(novoStudent.getCourse());
 
         return novoStudent;
     }

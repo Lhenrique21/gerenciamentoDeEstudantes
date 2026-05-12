@@ -10,7 +10,7 @@ public class CourseMapper {
     public Course mapCursoToEntityCreate(CourseCreateDto course){
         Course novoCourse = new Course();
         novoCourse.setName(course.getName());
-        novoCourse.setDurationCourse(course.getDuration());
+        novoCourse.setDurationCourse(course.getDurationCourse());
 
         return novoCourse;
     }

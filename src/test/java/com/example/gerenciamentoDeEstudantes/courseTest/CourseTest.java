@@ -9,7 +9,7 @@ public class CourseTest {
     public static CourseCreateDto courseCreateDto(){
         CourseCreateDto courseCreateDto = new CourseCreateDto();
         courseCreateDto.setName("Teste1");
-        courseCreateDto.setDuration(2);
+        courseCreateDto.setDurationCourse(2);
 
         return courseCreateDto;
     }
@@ -26,7 +26,7 @@ public class CourseTest {
         CourseUpdateDto courseUpdateDto = new CourseUpdateDto();
         courseUpdateDto.setId(1L);
         courseUpdateDto.setName("Teste2");
-        courseUpdateDto.setDuration(3);
+        courseUpdateDto.setDurationCourse(3);
 
         return courseUpdateDto;
     }
